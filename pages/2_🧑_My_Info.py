@@ -2,10 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import datetime
-import os
-import keyboard
-import threading
-import time
 
 st.set_page_config(
     page_title="My Info",
