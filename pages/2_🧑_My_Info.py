@@ -44,7 +44,7 @@ with med_info:
     ["Codeine", "Oxycodone", "Morphine", "Hydromorphone", "Fentanyl", "Heroin", "Methadone", "Buprenorphine"], help="You can select more than one off of this list.")
     column1, column2, column3 = st.columns(3)
     with column1:
-        addiction_status = st.radio("Are you currently addicted to any of these drugs?", ("Yes", "No"))
+        addiction_status = st.radio("Are you currently in treatment for any addiction?", ("Yes", "No"))
     with column2:
         overdose_status = st.radio("Have you previously overdosed on any drug?", ("Yes", "No"))
     with column3:
