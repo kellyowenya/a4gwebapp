@@ -6,10 +6,9 @@ import datetime
 st.set_page_config(
     page_title="My Info",
     page_icon="🧑",
+    layout="wide",
+    initial_sidebar_state="expanded",
 )
-
-user_info = st.container()
-med_info = st.container()
 
 st.sidebar.header("Information")
 st.sidebar.markdown(
@@ -21,8 +20,9 @@ st.sidebar.markdown(
     adjust accordingly.*"""
 )
 
-with user_info:
-    st.header("Tell us a bit about yourself.")
+st.header("Tell us a bit about yourself.")
+
+with st.form("user_info"):
     
     col1, col2 = st.columns(2)
     with col1:
@@ -38,7 +38,6 @@ with user_info:
     st.markdown("*Your exact location is important, as we use location-specific data to assess your personal situation and risk level. More info found in the \"Explore Our Data\" page.*")
     st.map()
 
-with med_info:
     st.header("Now, about your medicine intake.")
     options = st.multiselect("What opioid medications or drugs are you currently taking?",
     ["Codeine", "Oxycodone", "Morphine", "Hydromorphone", "Fentanyl", "Heroin", "Methadone", "Buprenorphine"], help="You can select more than one off of this list.")
@@ -50,10 +49,10 @@ with med_info:
     with column3:
         prev_hospital_status = st.radio("Have you been hospitalized in the past 6 months?", ("Yes", "No"))
     dosage_time = st.time_input("At what time do you usually prefer to take your prescription medication?", datetime.time(9, 00))
-
-st.write("That's all we need from you right now!")
-st.markdown("*Head over to your customized Dashboard to see our analysis at work.*")
-st.button("Take me there")
+    
+    st.write("That's all we need from you right now!")
+    st.markdown("*Head over to your customized Dashboard to see our analysis at work.*")
+    st.form_submit_button("Submit and take me there")
 
 
     

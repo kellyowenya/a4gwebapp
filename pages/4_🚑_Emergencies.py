@@ -6,6 +6,8 @@ import datetime
 st.set_page_config(
     page_title="Emergencies",
     page_icon="🚑",
+    layout="wide",
+    initial_sidebar_state="expanded",
 )
 
 emergency_page = st.container()
