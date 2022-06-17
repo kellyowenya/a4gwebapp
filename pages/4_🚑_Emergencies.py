@@ -3,6 +3,9 @@ import pandas as pd
 import numpy as np
 import datetime
 
+st.session_state.active_page = st.session_state.active_page
+st.session_state.first = st.session_state.first
+
 st.set_page_config(
     page_title="Emergencies",
     page_icon="🚑",

@@ -3,6 +3,9 @@ import pandas as pd
 import numpy as np
 import datetime
 
+st.session_state.active_page = st.session_state.active_page
+st.session_state.first = st.session_state.first
+
 st.set_page_config(
     page_title="My Info",
     page_icon="🧑",
@@ -21,12 +24,15 @@ st.sidebar.markdown(
 )
 
 st.header("Tell us a bit about yourself.")
+def form_callback():
+    # st.write(st.session_state.first)
+    st.session_state.first = st.session_state.first
 
 with st.form("user_info"):
     
     col1, col2 = st.columns(2)
     with col1:
-        first_name = st.text_input("First Name", max_chars=20)
+        first_name = st.text_input("First Name", max_chars=20, key="first")
     with col2:
         last_name = st.text_input("Last Name", max_chars=20)
     
@@ -52,7 +58,7 @@ with st.form("user_info"):
     
     st.write("That's all we need from you right now!")
     st.markdown("*Head over to your customized Dashboard to see our analysis at work.*")
-    st.form_submit_button("Submit and take me there")
+    st.form_submit_button("Submit and take me there", on_click=form_callback)
 
 
     

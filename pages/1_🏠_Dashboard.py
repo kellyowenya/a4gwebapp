@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 import datetime
 import streamlit as st
+st.session_state.active_page = st.session_state.active_page
+st.session_state.first = st.session_state.first
 
 st.set_page_config(
     page_title="Dashboard",
@@ -10,11 +12,11 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# if len(first_name) != 0:
-   # st.title("How are you doing, " + first_name + "?")
-# else:
-   # st.title("Who are you?")
-   # st.subheader("Fill out the \"My Info\" page so we can customize your dashboard.")
+if len(st.session_state.first) != 0:
+   st.title("How are you doing, " + st.session_state.first + "?")
+else:
+   st.title("Who are you?")
+   st.subheader("Fill out the \"My Info\" page so we can customize your dashboard.")
 
 col1, col2, col3 = st.columns(3)
 col1.metric("Temperature", "70 °F", "1.2 °F")
