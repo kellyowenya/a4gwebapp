@@ -6,6 +6,8 @@ import datetime
 st.set_page_config(
     page_title="Explore Our Data",
     page_icon="📈",
+    layout="wide",
+    initial_sidebar_state="expanded",
 )
 
 data_page = st.container()
