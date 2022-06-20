@@ -76,8 +76,8 @@ with st.form("user_info"):
     
     gender = st.radio("What's your gender?", ("Male", "Female"), help="If you identify as a different gender than the one assigned to you at birth, please put your birth gender here.", key="gender", horizontal=True)
     st.date_input("When's your birthday?", min_value=datetime.date(1910, 1, 1), key="dob")
-    st.slider('How tall are you?', 100, 250, 175, format="%d cm", key="height")
-    st.slider('How much do you weigh?', 35, 150, 75, format="%d kg", key="weight")
+    st.slider('How tall are you?', 100, 250, format="%d cm", key="height")
+    st.slider('How much do you weigh?', 35, 150, format="%d kg", key="weight")
     st.selectbox("What's your blood type?", ['Unknown', 'A+', "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"], key="blood")
 
     st.header("We may need some additional background information...")
