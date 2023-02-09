@@ -3,6 +3,7 @@
 
 ## What is dose.io?
 ![dose.io Logo](https://www.ai4goodlab.com/wp-content/uploads/2022/06/dose-io.jpg)
+
 "We'll help you make smart and informed decisions about your use of medication, all while keeping you safe."
 
 dose.io is a platform that leverages under-utilized data and empowers users to gauge their risk of addiction and drug-related harms. Its aim is to help minimize adverse health outcomes through a web application that connects with users and their communities.
