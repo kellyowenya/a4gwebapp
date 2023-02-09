@@ -12,5 +12,6 @@ dose.io is a platform that leverages under-utilized data and empowers users to g
 I built this web app using Streamlit, a Python framework for data science/machine learning apps. I honestly really enjoyed using it!
 
 ### Extras
-I was the primary developer of this web app, so I made a post on my porfolio documenting my process! If you want a detailed look into the project, feel free to take a look.
-[Check it out here.](https://uxfol.io/p/kellyowenya/doseio)
+I was the developer of this web app, so I made a post on my porfolio documenting my process! If you want a detailed look into the project, feel free to take a look.
+
+[Check it out here!](https://uxfol.io/p/kellyowenya/doseio)
